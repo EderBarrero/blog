@@ -39,5 +39,6 @@ test:
 production:
   <<: *default
   database: BlogWithoutGoogle_production
-  username: BlogWithoutGoogle
-  password: <%= ENV["BLOGWITHOUTGOOGLE_DATABASE_PASSWORD"] %>
+  username: ederbarrero
+  password: Welcome123!
+  host: localhost
