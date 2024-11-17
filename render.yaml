@@ -1,6 +1,6 @@
 databases:
   - name: eder-blog 
-    databaseName: eder-blog
+    databaseName: ederblog
     user: mysite
     plan: free
 
