@@ -1,7 +1,7 @@
 databases:
   - name: eder-blog 
     databaseName: ederblog
-    user: mysite
+    user: EderBarrero
     plan: free
 
 services:
