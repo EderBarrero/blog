@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'render/index'
   devise_for :users
 
-  root to: "posts#index"
+  root "render#index"
+  
+  resources :posts 
 
-  resources :posts
 end
