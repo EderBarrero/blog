@@ -41,4 +41,4 @@ production:
   database: BlogWithoutGoogle_production
   username: ederbarrero
   password: Welcome123!
-  host: localhost
+  host: <%= ENV['DATABASE_HOST'] %>
