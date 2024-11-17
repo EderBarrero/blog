@@ -48,6 +48,8 @@ gem 'bigdecimal'
 
 gem 'mutex_m'
 
+gem 'ruby-lsp'
+gem 'ruby-lsp-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
