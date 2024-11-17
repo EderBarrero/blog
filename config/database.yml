@@ -38,7 +38,8 @@ test:
 
 production:
   <<: *default
-  database: BlogWithoutGoogle_production
-  username: ederbarrero
-  password: Welcome123!
-  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  host: <%= ENV['DATABASE_HOST'] %>  
+  username: <%= ENV['DATABASE_USERNAME'] %>  
+  password: <%= ENV['DATABASE_PASSWORD'] %>  
+  port: 5432  
