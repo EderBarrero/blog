@@ -6,12 +6,12 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = user_signed_in? ? Post.all : Post.published
+    @posts = user_signed_in? ? Post.all.paginate(page: params[:page], per_page:15) : Post.published.paginate(page: params[:page], per_page:15)
   end
 
   # GET /posts/1 or /posts/1.json
   def show
-  end 
+  end
 
   # GET /posts/new
   def new
