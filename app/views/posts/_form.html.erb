@@ -26,6 +26,11 @@
     <%= form.text_field :author %>
   </div>
 
+    <div>
+    <%= form.label :published_at, style: "display: block" %>
+    <%= form.datetime_select :published_at, include_blank: true %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

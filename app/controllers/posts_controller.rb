@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = user_signed_in? ? Post.all : Post.published
   end
 
   # GET /posts/1 or /posts/1.json
@@ -62,13 +62,13 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
+    def set_post 
+      @post = user_signed_in? ? Post.find(params[:id]) : Post.published.find(params[:id]) 
     end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :author)
+      params.require(:post).permit(:title, :body, :author, :published_at)
     end
 
     def record_not_found
