@@ -5,8 +5,9 @@ module.exports = {
     './public/*.html',                        // Archivos HTML estáticos
     './app/helpers/**/*.rb',                   // Helpers de Ruby
     './app/javascript/**/*.js',                // Archivos JavaScript
-    './app/views/**/*.{erb,haml,html,slim}'    // Vistas de Rails
+    './app/views/**/*.{erb,haml,html,slim}'    // Vistas de Rails (esto cubre tus archivos .html.erb)
   ],
+  
   theme: {
     extend: {
       // Extender la fuente sans para incluir 'Inter var'

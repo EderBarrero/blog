@@ -7,9 +7,9 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = if user_signed_in? 
-      Post.paginate(page: params[:page], per_page:15).sorted 
+      Post.paginate(page: params[:page], per_page:10).sorted 
      else
-       Post.published.paginate(page: params[:page], per_page:15).sorted
+       Post.published.paginate(page: params[:page], per_page:10).sorted
      end  
   end
 
