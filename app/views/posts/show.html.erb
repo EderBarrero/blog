@@ -4,9 +4,10 @@
 
 <div>
   <% if user_signed_in? %>
-    <%= link_to "Edit this post", edit_post_path(@post) %>
-
-    <%= button_to "Destroy this post", @post, method: :delete %>
+    <%= button_to "Edit this post", edit_post_path(@post), method: :get, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+    <br>
+    <%= button_to "Destroy this post", @post, method: :delete, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+    <br>
   <% end %>
   
   <%= button_to "Back to posts", posts_path, method: :get, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>

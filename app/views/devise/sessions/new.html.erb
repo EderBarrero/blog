@@ -1,26 +1,32 @@
-<h2>Log in</h2>
+<div class="text-center my-16">
+  <h1>Sign in to your account</h1>
+</div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="flex flex-col px-16 pb-8">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded-full text-center" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="flex flex-col px-16 pb-4">
+    <%= f.label :password %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "rounded-full text-center" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
+    <div class="flex flex-col px-16">
+      <%= f.check_box :remember_me, class: "rounded-full" %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="flex flex-col pb-16 pt-8 px-32 sm:px-64 md:px-64 lg:px-64 xl:px-64">
+    <button type="submit" class="rounded-full bg-indigo-600 py-3 text-sm font-semibold text-white hover:bg-indigo-500">
+      Sign in
+    </button>
   </div>
+
+  
 <% end %>
 
 <%= render "devise/shared/links" %>

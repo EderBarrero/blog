@@ -10,9 +10,9 @@ module.exports = {
   
   theme: {
     extend: {
-      // Extender la fuente sans para incluir 'Inter var'
+      // Extender la fuente sans para incluir 'Montserrat'
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
     },
   },
@@ -21,5 +21,6 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
+    require('autoprefixer'),
   ],
 }

@@ -5,6 +5,10 @@
  *= require_self
 */
 
+/* Agrega esto en tu archivo CSS (por ejemplo, application.css o application.scss) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+
 .digg_pagination {
     background: white;
     cursor: default;
