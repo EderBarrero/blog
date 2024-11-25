@@ -6,12 +6,16 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = if user_signed_in? 
+      Post.paginate(page: params[:page], per_page:10).sorted 
+     else
+       Post.published.paginate(page: params[:page], per_page:10).sorted
+     end  
   end
 
   # GET /posts/1 or /posts/1.json
   def show
-  end 
+  end
 
   # GET /posts/new
   def new
@@ -27,12 +31,15 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     respond_to do |format|
+      flash[:notice] = "Your profile has been updated."
       if @post.save
         format.html { redirect_to @post, notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
+        flash[:notice] = "Your profile has been updated."
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+        
       end
     end
   end
@@ -62,13 +69,13 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
+    def set_post 
+      @post = user_signed_in? ? Post.find(params[:id]) : Post.published.find(params[:id]) 
     end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :author)
+      params.require(:post).permit(:title, :body, :author, :published_at)
     end
 
     def record_not_found

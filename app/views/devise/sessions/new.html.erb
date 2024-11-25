@@ -1,26 +1,44 @@
-<h2>Log in</h2>
+<div class="flex justify-center my-16">
+  <!-- Cuadro con borde y sombra -->
+  <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-2xl border border-gray-300 ">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="flex flex-col items-center">
+        <%= image_tag("aba_tech_logo.png") %>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="text-center mb-8">
+      <h1 class="text-2xl font-bold text-gray-800">Sign in to your account</h1>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="flex flex-col mb-6">
+        <%= f.label :email, class: "text-sm font-medium text-gray-700" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col mb-6">
+        <%= f.label :password, class: "text-sm font-medium text-gray-700" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="flex items-center mb-6">
+          <%= f.check_box :remember_me, class: "rounded-full" %>
+          <%= f.label :remember_me, class: "ml-2 text-sm text-gray-700" %>
+        </div>
+      <% end %>
+
+      <div class="flex flex-col mt-8">
+        <button type="submit" class="w-full rounded-full bg-indigo-600 py-3 text-sm font-semibold text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
+          Sign in
+        </button>
+      </div>
+
+    <% end %>
+
+    <div class="flex flex-row justify-end gap-4 mt-6">
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

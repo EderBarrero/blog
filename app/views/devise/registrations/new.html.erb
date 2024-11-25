@@ -22,8 +22,13 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
   </div>
+
+  <br>
+  
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<%= button_to "Back", root_path, method: :get, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
