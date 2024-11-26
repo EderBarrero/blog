@@ -5,7 +5,8 @@ module.exports = {
     './public/*.html',                        // Archivos HTML estáticos
     './app/helpers/**/*.rb',                   // Helpers de Ruby
     './app/javascript/**/*.js',                // Archivos JavaScript
-    './app/views/**/*.{erb,haml,html,slim}'    // Vistas de Rails (esto cubre tus archivos .html.erb)
+    './app/views/**/*.{erb,haml,html,slim}',   // Vistas de Rails (esto cubre tus archivos .html.erb)
+    "./node_modules/flowbite/**/*.js"
   ],
   
   theme: {
@@ -22,5 +23,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
     require('autoprefixer'),
+    require('flowbite/plugin')
   ],
 }
