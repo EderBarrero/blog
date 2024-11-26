@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ddollar/foreman.git
+  revision: 3a262714030a83a59388a48ffdb2e93cdac12388
+  specs:
+    foreman (0.88.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -275,6 +281,7 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.9)
+  foreman!
   importmap-rails
   jbuilder
   mutex_m

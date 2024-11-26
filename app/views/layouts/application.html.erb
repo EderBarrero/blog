@@ -32,6 +32,9 @@
 
       <% end %>
     </div>
+
+    <%= render partial: 'shared/notifications', locals: {message: flash[:notice]} %>
+
     
     <%= yield %>
   </body>
