@@ -84,6 +84,6 @@ gem "devise", "~> 4.9"
 
 gem "will_paginate", "~> 4.0"
 
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails"
 
 gem "foreman", github: 'ddollar/foreman'

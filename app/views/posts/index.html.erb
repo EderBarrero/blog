@@ -1,12 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
 <% unless user_signed_in? %>
-  <%= render partial: 'shared/about' %>
+  <%= render partial: 'shared/header' %>
 <% end %>
 
 <% if user_signed_in? %>
   <%= render partial: 'shared/sidebar' %>
 <% end %>
+
 
 <div id="posts">
   <% @posts.each do |post| %>
