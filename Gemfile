@@ -87,3 +87,5 @@ gem "will_paginate", "~> 4.0"
 gem "tailwindcss-rails"
 
 gem "foreman", github: 'ddollar/foreman'
+
+gem "byebug"
