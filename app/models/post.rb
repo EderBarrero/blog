@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
+
+  belongs_to :user
+
   validates :title, presence: true
   validates :body, presence: true
 
@@ -19,5 +22,3 @@ class Post < ApplicationRecord
     published_at? && published_at > Time.current
   end
 end
-
- 
