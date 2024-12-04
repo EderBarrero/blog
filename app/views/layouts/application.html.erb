@@ -19,6 +19,10 @@
 
     <%= render partial: 'shared/notifications', locals: {message: flash[:notice]} %>
 
+    <% if user_signed_in? %>
+      <%= render partial: 'shared/sidebar' %>
+    <% end %>
+
     <%= yield %>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
