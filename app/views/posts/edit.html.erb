@@ -1,10 +1,16 @@
-<h1>Editing post</h1>
+<div class="flex justify-center my-16">
+  <!-- Cuadro con borde y sombra -->
+  <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-2xl border border-gray-300 ">
 
-<%= render "form", post: @post %>
+    <h1>Editing post</h1>
 
-<br>
+    <%= render "form", post: @post %>
 
-<div>
-  <%= button_to "Show this post", @post, method: :get %> |
-  <%= button_to "Back to posts", posts_path, method: :get %>
+    <br>
+
+    <div>
+      <%= button_to "Show this post", @post, method: :get %> |
+      <%= button_to "Back to posts", posts_path, method: :get %>
+    </div>
+  </div>
 </div>

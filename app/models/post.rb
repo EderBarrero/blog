@@ -2,7 +2,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
 
-  validates :title, :body, :author, presence: true
+  validates :title, :body, :author, :user_id, presence: true
 
   scope :sorted, -> { order(published_at: :desc, updated_at: :desc)}
   scope :draft, -> { where(published_at: nil) }
