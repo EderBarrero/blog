@@ -1,4 +1,6 @@
-<div id="<%= dom_id post %>">
+
+
+<div id="<%= dom_id post %>"> 
 
   <div>
     <p class="font-bold m-0">
@@ -9,12 +11,18 @@
     </p>
   </div>
 
-  <p class="text-sm">
-    <%= post.title %>
-  </p>
+<div class="flex justify-center prose mx-auto py-4">
+  <!-- Cuadro con borde y sombra -->
+  <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-sm border border-gray-300 ">
 
-  <p class="text-sm m-0">
-    <%= post.body %>
-  </p>
+      <p class="text-sm">
+        <%= post.title %>
+      </p>
 
+      <p class="text-sm m-0">
+        <%= post.body %>
+      </p>
+
+    </div>
+  </div>
 </div>

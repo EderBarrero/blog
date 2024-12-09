@@ -4,11 +4,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    
   end
 
-  def edit
-    
+  def edit 
+    @user = User.find(user_params[:id])
+  end
+
+  private
+
+  def user_params
+    require()
   end
 
 
