@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
-  validates :title, presence: true
-  validates :body, presence: true
+
+  belongs_to :user
+
+  validates :title, :body, presence: true
 
   scope :sorted, -> { order(published_at: :desc, updated_at: :desc)}
   scope :draft, -> { where(published_at: nil) }
@@ -19,5 +21,3 @@ class Post < ApplicationRecord
     published_at? && published_at > Time.current
   end
 end
-
- 

@@ -11,29 +11,24 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="flex flex-col mb-6">
+    <%= form.label :title, style: "display: block", class: "text-sm font-medium text-gray-700" %>
+    <%= form.text_field :title, class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
   </div>
 
-  <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+  <div class="flex flex-col mb-6">
+    <%= form.label :body, style: "display: block", class: "text-sm font-medium text-gray-700" %>
+    <%= form.text_area :body, class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
   </div>
 
-  <div>
-    <%= form.label :author, style: "display: block" %>
-    <%= form.text_field :author %>
+  <div class="flex flex-col">
+      <%= form.label :published_at, style: "display: block", class: "text-sm font-medium text-gray-700" %>
+      <%= form.datetime_field :published_at, min: Date.tomorrow, class: 'rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2'%>
   </div>
 
-    <div>
-    <%= form.label :published_at, style: "display: block" %>
-    <%= form.datetime_select :published_at, include_blank: true %>
-  </div>
-
-  <br>
-
-  <div class="actions">
-    <%= form.submit(class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200") %>
-  </div>
+    <div class="flex flex-row justify-center mt-8">
+      <button type="submit" class="px-16 rounded-full bg-indigo-600 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
+        <%= action_name == 'new' ? 'Create Post' : 'Update post' %> 
+      </button>
+    </div>
 <% end %>

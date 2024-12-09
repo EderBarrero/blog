@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  get 'render/index'
-  devise_for :users
+
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 
   root to: "posts#index"
 
+  devise_for :users
+
   resources :posts
+
+  resources :users
 end

@@ -1,34 +1,73 @@
-<h2>Sign up</h2>
+<div class="flex justify-center my-16 prose mx-auto">
+  <!-- Cuadro con borde y sombra -->
+  <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-2xl border border-gray-300 ">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="flex flex-col items-center">
+        <%= image_tag("aba_tech_logo.png", class: "w-32 h-auto") %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="text-center mb-8">
+      <h1 class="text-6xl font-bold text-blue-600">Welcome</h1>
+    </div>
+
+    <div class="text-center text-sm">
+      <p>Create your NetBook Account</p>
+    </div>
+    
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="flex flex-col mb-6">
+        <%= f.label :email, class: "text-sm font-medium text-gray-700" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col mb-6">
+        <%= f.label :first_name, class: "text-sm font-medium text-gray-700" %>
+        <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col mb-6">
+        <%= f.label :last_name, class: "text-sm font-medium text-gray-700" %>
+        <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col mb-6">
+        <%= f.label :password, class: "text-sm font-medium text-gray-700" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+      </div>
+
+      <div class="flex flex-col mb-6">
+        <%= f.label :password_confirmation, class: "text-sm font-medium text-gray-700" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+      </div>
+
+      <div class="text-xs">
+          <p>By signing up, you agree with out Tearms & conditions and Privacy statement.</p>
+      </div>
+
+      <div class="flex flex-col pt-4">
+
+        <button type="submit" class="rounded-full bg-indigo-600 py-3 text-sm font-semibold text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
+          Sign up
+        </button>
+
+      <div class="flex flex-col items-end">
+        <%= link_to "Already have an account?", new_session_path(resource_name), class: "mt-8 no-underline" %>
+      </div>
+      </div>
+
+      <br>
+      
+    <% end %>
+    
+    <div class="text-center">
+      <%= button_to "Back", root_path, method: :get, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up", class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
-  </div>
-
-  <br>
-  
-<% end %>
-
-<%= render "devise/shared/links" %>
-
-<%= button_to "Back", root_path, method: :get, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+</div>

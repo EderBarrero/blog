@@ -1,32 +1,46 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render partial: 'shared/about' %>
-
-
-<% if user_signed_in? %>
-  <%= render partial: 'shared/sidebar' %>
+<% unless user_signed_in? %>
+  <%= render partial: 'shared/header' %>
 <% end %>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <h2>
-      <%= link_to "#{post.title}", post %>
-    </h2>
-    <p>
-      <%= post.author %>
-    </p>
-    <% if post.draft? %>
-      <div class="p-2 rounded-full bg-gray-100 text-gray-900 w-24"> Draft </div>
-  <% elsif post.scheduled? %>
-    <div class="p-2 rounded-full bg-blue-100 text-blue-900 w-24"> Scheduled </div>
-    <% end %>
-  <% end %>
-</div>
-
-<div>
+<div class="flex flex-row mx-auto px-32 pt-16 justify-end">
   <% if user_signed_in? %>  
-    <%= button_to "New post", new_post_path, method: :get, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+    <%= button_to "Write your Post", new_post_path, method: :get, class: "px-16 py-4 rounded-full bg-blue-500 font-semibold text-white text-center" %>
   <% end %>
 </div>
 
-<%= render partial: 'posts/pagination' %>
+
+<div id="posts" class="prose mx-auto">
+  <% @posts.each do |post| %>
+    <div class="flex justify-center mb-8">
+      <!-- Cuadro con borde y sombra -->
+      <div class="w-full max-w-lg bg-white p-8 rounded-lg border border-gray-300 ">
+
+        <div class="flex flex-row justify-between">
+
+          <div>
+            <p class="font-bold m-0">
+              By <%= "#{post.user.first_name} #{post.user.last_name} "%>
+            </p>
+            <p class="text-xs flex flex-row m-0">
+              <%= post.published_at ? post.published_at.strftime('%Y-%m-%d %H:%M') : 'not published yet' %>
+            </p>
+          </div>
+
+          <% if post.draft? %>
+            <div class="p-2 rounded-full bg-gray-500 font-semibold w-24 text-white text-center"> Draft </div>
+          <% elsif post.scheduled? %>
+            <div class="p-2 rounded-full bg-green-500 font-semibold w-32 text-white text-center"> Scheduled </div>
+          <% end %>
+        </div>
+        <p class="text-sm">
+          <%="#{post.title}"%>
+        </p>
+        <p>
+          <%= link_to "Read post", post, class: "text-sm no-underline" %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= render partial: 'shared/pagination' %>

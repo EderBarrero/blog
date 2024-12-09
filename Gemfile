@@ -71,6 +71,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'letter_opener'
+  gem 'letter_opener_web'
 end
 
 group :test do
@@ -84,6 +86,8 @@ gem "devise", "~> 4.9"
 
 gem "will_paginate", "~> 4.0"
 
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails"
 
 gem "foreman", github: 'ddollar/foreman'
+
+gem "byebug"
