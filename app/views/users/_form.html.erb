@@ -1,7 +1,7 @@
-<%= form_with(model: post) do |form| %>
+<%= form_with(model: user) do |form| %>
   <% if post.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
         <% post.errors.each do |error| %>
@@ -13,35 +13,35 @@
 
   <div class="flex flex-col mb-6">
     <%= form.label :title, style: "display: block", class: "text-sm font-medium text-gray-700" %>
-    <%= form.text_field :title, class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+    <%= form.text_field :title, class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
   </div>
 
   <div class="flex flex-col mb-6">
     <%= form.label :body, style: "display: block", class: "text-sm font-medium text-gray-700" %>
-    <%= form.text_area :body, class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+    <%= form.text_area :body, class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
   </div>
 
   <div class="flex flex-row justify-center gap-2">
     <div class="mb-6">
       <%= form.label :year, style: "display: block", class: "text-sm font-medium text-gray-700" %>
       <%= form.select :year, Date.today.year..Date.today.year + 5, {},
-                      class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+                      class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
     </div>
     <div class="mb-6">
       <%= form.label :month, style: "display: block", class: "text-sm font-medium text-gray-700" %>
       <%= form.select :month, Date::MONTHNAMES.compact.each_with_index.map { |name, index| [name, index + 1] }, {}, 
-                      class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+                      class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
     </div>
     <div class="mb-6">
       <%= form.label :day, style: "display: block", class: "text-sm font-medium text-gray-700" %>
       <%= form.select :day, 1..31, {}, 
-                      class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+                      class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
     </div>
   </div>
 
-    <div class="flex flex-col mt-4 px-32">
-      <button type="submit" class="w-full rounded-full bg-indigo-600 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
-        <%= action_name == 'new' ? 'Create Post' : 'Update post' %> 
+    <div class="flex flex-col mt-6 px-16">
+      <button type="submit" class="w-full rounded-full bg-indigo-600 py-3 text-sm font-semibold text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50">
+        Create post
       </button>
     </div>
 <% end %>

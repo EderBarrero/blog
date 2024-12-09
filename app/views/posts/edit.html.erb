@@ -1,16 +1,19 @@
-<div class="flex justify-center my-16">
+<div class="flex justify-center my-16 prose mx-auto">
   <!-- Cuadro con borde y sombra -->
   <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-2xl border border-gray-300 ">
 
-    <h1>Editing post</h1>
-
+    <div class="text-center mb-8 mt-8">
+      <p class="text-3xl font-bold">Edit Post</p>
+    </div>
     <%= render "form", post: @post %>
 
-    <br>
+    <div class="text-center mt-4">
+      <p class="text-sm font-medium text-gray-700">Or</p>
+    </div>
 
-    <div>
-      <%= button_to "Show this post", @post, method: :get %> |
-      <%= button_to "Back to posts", posts_path, method: :get %>
+    <div class="flex flex-row justify-center gap-8 mt-4 mb-8">
+      <%= button_to "Show this post", @post, method: :get, class: "text-sm bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+      <%= button_to "Back to posts", posts_path, method: :get, class: "text-sm bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
     </div>
   </div>
 </div>

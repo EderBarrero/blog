@@ -1,4 +1,4 @@
-<div class="flex justify-center my-16">
+<div class="flex justify-center my-16 prose mx-auto">
   <!-- Cuadro con borde y sombra -->
   <div class="w-full max-w-lg bg-white p-8 rounded-lg shadow-2xl border border-gray-300 ">
 
@@ -14,12 +14,12 @@
 
       <div class="flex flex-col mb-6">
         <%= f.label :email, class: "text-sm font-medium text-gray-700" %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
       </div>
 
       <div class="flex flex-col mb-6">
         <%= f.label :password, class: "text-sm font-medium text-gray-700" %>
-        <%= f.password_field :password, autocomplete: "current-password", class: "rounded-full text-center border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "rounded-full text-center text-sm border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 px-4 py-2 mt-2" %>
       </div>
 
       <% if devise_mapping.rememberable? %>

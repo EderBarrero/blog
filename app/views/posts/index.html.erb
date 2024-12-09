@@ -2,26 +2,44 @@
   <%= render partial: 'shared/header' %>
 <% end %>
 
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <h2>
-      <%= link_to "#{post.title}", post %>
-    </h2>
-    <p>
-      <%= post.author %>
-    </p>
-    <% if post.draft? %>
-      <div class="p-2 rounded-full bg-gray-100 text-gray-900 w-24"> Draft </div>
-  <% elsif post.scheduled? %>
-    <div class="p-2 rounded-full bg-blue-100 text-blue-900 w-24"> Scheduled </div>
-    <% end %>
+<div class="prose mx-auto pt-8">
+  <% if user_signed_in? %>  
+    <%= button_to "Create your Post", new_post_path, method: :get, class: "text-sm bg-gray-100 px-4 py-3 rounded-full hover:bg-gray-200" %>
   <% end %>
 </div>
 
-<div>
-  <% if user_signed_in? %>  
-    <%= button_to "New post", new_post_path, method: :get, class: "bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+
+<div id="posts" class="prose mx-auto">
+  <% @posts.each do |post| %>
+    <div class="flex justify-center my-16">
+      <!-- Cuadro con borde y sombra -->
+      <div class="w-full max-w-lg bg-white p-8 rounded-lg border border-gray-300 ">
+
+        <div class="flex flex-row justify-between">
+
+          <div>
+            <p class="font-bold m-0">
+              By <%= "#{post.user.first_name} #{post.user.last_name} "%>
+            </p>
+            <p class="text-xs flex flex-row m-0">
+              <%= post.published_at ? post.published_at.strftime('%Y-%m-%d %H:%M') : 'not published yet' %>
+            </p>
+          </div>
+
+          <% if post.draft? %>
+            <div class="p-2 rounded-full bg-green-500 w-24 font-semibold text-center"> Draft </div>
+          <% elsif post.scheduled? %>
+            <div class="p-2 rounded-full bg-blue-100 text-blue-900 w-24 text-center"> Scheduled </div>
+          <% end %>
+        </div>
+        <p class="text-sm">
+          <%="#{post.title}"%>
+        </p>
+        <p>
+          <%= link_to "Read post", post, class: "text-sm no-underline" %>
+        </p>
+      </div>
+    </div>
   <% end %>
 </div>
 
