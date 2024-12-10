@@ -1,10 +1,10 @@
 class User < ApplicationRecord
 
-  validates :role, :first_name, :last_name, :status, presence: true
+  validates :role, :status, :first_name, :last_name, presence: true
 
   has_many :posts, dependent: :destroy
 
-  scope :is_admin, -> {where("role = ?", 1)}
+  scope :is_admin, -> {where("role = ?", 2)}
   # Ex:- scope :active, -> {where(:active => true)}
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -13,7 +13,7 @@ class User < ApplicationRecord
  
   enum role: [:user, :moderator, :admin]
 
-  enum status: [:active, :inactive]
+  enum status: [:inactive, :active]
 
   after_initialize :set_default_role, :if => :new_record? 
 
