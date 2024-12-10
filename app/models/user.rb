@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  validates :role, :first_name, :last_name, presence: true
+  validates :role, :first_name, :last_name, :status, presence: true
 
   has_many :posts, dependent: :destroy
 
@@ -13,10 +13,16 @@ class User < ApplicationRecord
  
   enum role: [:user, :moderator, :admin]
 
+  enum status: [:active, :inactive]
+
   after_initialize :set_default_role, :if => :new_record? 
 
   def set_default_role
     self.role ||= :user
+  end
+
+  def set_default_status
+    self.status ||= :active
   end
 end
 
