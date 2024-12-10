@@ -2,9 +2,9 @@
   <%= render partial: 'shared/header' %>
 <% end %>
 
-<div class="flex flex-row mx-auto px-32 pt-16 justify-end">
+<div class="flex flex-row justify-end p-8">
   <% if user_signed_in? %>  
-    <%= button_to "Write your Post", new_post_path, method: :get, class: "px-16 py-4 rounded-full bg-blue-500 font-semibold text-white text-center" %>
+    <%= button_to "Write your Post", new_post_path, method: :get, class: "px-8 py-3 rounded-full bg-blue-500 font-semibold text-white text-center" %>
   <% end %>
 </div>
 

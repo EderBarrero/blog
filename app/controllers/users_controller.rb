@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_admin!
+  
   def index
     @users = User.all.paginate(page: params[:page], per_page:10)
   end
@@ -12,8 +14,12 @@ class UsersController < ApplicationController
 
   private
 
+  def authenticate_admin!
+    redirect_to root_path, alert: 'Access denied' unless current_user.admin?
+  end
+
   def user_params
-    require()
+    require(:user).permit(:id, :first_name, :lastname, :role, :status)
   end
 
 
