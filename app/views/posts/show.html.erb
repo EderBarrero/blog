@@ -9,12 +9,12 @@
     <div class="mt-8">
       <% if user_signed_in? %>
         <div class="flex flex-row justify-center gap-8">
-          <%= button_to "Edit this post", edit_post_path(@post), method: :get, class: "text-sm bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
-          <%= button_to "Destroy this post", @post, method: :delete, class: "text-sm bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+          <%= button_to "Edit this post", edit_post_path(@post), method: :get, class: "bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 text-sm" %>
+          <%= button_to "Destroy this post", @post, method: :delete, class: "bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 text-sm" %>
         </div>
       <% end %>
       <div class="flex flex-row justify-center mt-8">
-        <%= button_to "Back to posts", posts_path, method: :get, class: "text-sm bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200" %>
+        <%= button_to "Back to posts", posts_path, method: :get, class: "bg-gray-200 px-4 py-2 rounded-full hover:bg-gray-300 text-sm" %>
       </div>
     </div>
   </div>

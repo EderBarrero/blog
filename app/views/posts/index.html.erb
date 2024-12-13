@@ -2,9 +2,12 @@
   <%= render partial: 'shared/header' %>
 <% end %>
 
-<div class="flex flex-row justify-end p-8">
-  <% if user_signed_in? %>  
-    <%= button_to "Write your Post", new_post_path, method: :get, class: "px-8 py-3 rounded-full bg-blue-500 font-semibold text-white text-center" %>
+<div class="flex flex-row justify-end p-8 gap-6">
+  <% if user_signed_in? %> 
+    <p class="p-2 font-bold">
+      <%= current_user.first_name + " " + current_user.last_name %>
+    </p>
+      <%= button_to "New Post", new_post_path, method: :get, class: "rounded-full bg-indigo-600 py-2 px-16 text-sm text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50" %>
   <% end %>
 </div>
 
@@ -19,7 +22,7 @@
 
           <div>
             <p class="font-bold m-0">
-              By <%= "#{post.user.first_name} #{post.user.last_name} "%>
+              <%= user_signed_in? ? "Created by you" : "By #{post.user.first_name} #{post.user.last_name}"%>
             </p>
             <p class="text-xs flex flex-row m-0">
               <%= post.published_at ? post.published_at.strftime('%Y-%m-%d %H:%M') : 'not published yet' %>
