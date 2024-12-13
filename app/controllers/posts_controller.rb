@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = if user_signed_in? 
-      Post.paginate(page: params[:page], per_page:10).sorted 
+      Post.all_user(current_user).paginate(page: params[:page], per_page:10).sorted 
      else
        Post.published.paginate(page: params[:page], per_page:10).sorted
      end  
