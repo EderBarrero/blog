@@ -1,0 +1,18 @@
+current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+/home/eder/.rbenv/versions/3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-8scf5p sitelibdir\=./.gem.20241215-431524-8scf5p clean
+
+current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-8scf5p sitelibdir\=./.gem.20241215-431524-8scf5p
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-8scf5p sitelibdir\=./.gem.20241215-431524-8scf5p install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20241215-431524-8scf5p
+
+current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.2/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-8scf5p sitelibdir\=./.gem.20241215-431524-8scf5p clean

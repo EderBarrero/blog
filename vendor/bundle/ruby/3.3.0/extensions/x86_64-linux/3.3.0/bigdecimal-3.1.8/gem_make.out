@@ -32,17 +32,17 @@ checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
 creating Makefile
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-vjv0jx sitelibdir\=./.gem.20241117-38862-vjv0jx clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-m97fh0 sitelibdir\=./.gem.20241215-431524-m97fh0 clean
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-vjv0jx sitelibdir\=./.gem.20241117-38862-vjv0jx
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-m97fh0 sitelibdir\=./.gem.20241215-431524-m97fh0
 compiling bigdecimal.c
 compiling missing.c
 linking shared-object bigdecimal.so
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-vjv0jx sitelibdir\=./.gem.20241117-38862-vjv0jx install
-/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20241117-38862-vjv0jx
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-m97fh0 sitelibdir\=./.gem.20241215-431524-m97fh0 install
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20241215-431524-m97fh0
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bigdecimal-3.1.8/ext/bigdecimal
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-vjv0jx sitelibdir\=./.gem.20241117-38862-vjv0jx clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-m97fh0 sitelibdir\=./.gem.20241215-431524-m97fh0 clean

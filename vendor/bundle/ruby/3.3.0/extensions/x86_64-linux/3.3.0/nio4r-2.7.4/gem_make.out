@@ -13,10 +13,10 @@ checking for sys/resource.h... yes
 creating Makefile
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-qujdpl sitelibdir\=./.gem.20241117-38862-qujdpl clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-14qbff sitelibdir\=./.gem.20241215-431524-14qbff clean
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-qujdpl sitelibdir\=./.gem.20241117-38862-qujdpl
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-14qbff sitelibdir\=./.gem.20241215-431524-14qbff
 compiling bytebuffer.c
 bytebuffer.c: In function ‘Init_NIO_ByteBuffer’:
 bytebuffer.c:59:6: warning: old-style function definition [-Wold-style-definition]
@@ -285,8 +285,8 @@ cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ 
 linking shared-object nio4r_ext.so
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-qujdpl sitelibdir\=./.gem.20241117-38862-qujdpl install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20241117-38862-qujdpl
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-14qbff sitelibdir\=./.gem.20241215-431524-14qbff install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20241215-431524-14qbff
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.4/ext/nio4r
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-qujdpl sitelibdir\=./.gem.20241117-38862-qujdpl clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-14qbff sitelibdir\=./.gem.20241215-431524-14qbff clean

@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   resources :posts
 
   resources :users
+
+  get 'pdf_generator/generate_pdf', to: 'pdf_generator#generate_pdf', as: :generate_pdf
+
+  get 'pdf_generator', to: 'pdf_generator#index'
+
 end

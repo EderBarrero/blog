@@ -3,10 +3,10 @@ current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle
 creating Makefile
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-3hopwo sitelibdir\=./.gem.20241117-38862-3hopwo clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-qelh8t sitelibdir\=./.gem.20241215-431524-qelh8t clean
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-3hopwo sitelibdir\=./.gem.20241117-38862-3hopwo
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-qelh8t sitelibdir\=./.gem.20241215-431524-qelh8t
 compiling bcrypt_ext.c
 bcrypt_ext.c: In function ‘Init_bcrypt_ext’:
 bcrypt_ext.c:113:6: warning: old-style function definition [-Wold-style-definition]
@@ -29,8 +29,8 @@ cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ 
 linking shared-object bcrypt_ext.so
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-3hopwo sitelibdir\=./.gem.20241117-38862-3hopwo install
-/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20241117-38862-3hopwo
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-qelh8t sitelibdir\=./.gem.20241215-431524-qelh8t install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20241215-431524-qelh8t
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-3hopwo sitelibdir\=./.gem.20241117-38862-3hopwo clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-qelh8t sitelibdir\=./.gem.20241215-431524-qelh8t clean
