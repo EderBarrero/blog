@@ -7,16 +7,16 @@ checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-cdorg1 sitelibdir\=./.gem.20241117-38862-cdorg1 clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-snncfz sitelibdir\=./.gem.20241215-431524-snncfz clean
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-cdorg1 sitelibdir\=./.gem.20241117-38862-cdorg1
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-snncfz sitelibdir\=./.gem.20241215-431524-snncfz
 compiling bootsnap.c
 linking shared-object bootsnap/bootsnap.so
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-cdorg1 sitelibdir\=./.gem.20241117-38862-cdorg1 install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20241117-38862-cdorg1/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-snncfz sitelibdir\=./.gem.20241215-431524-snncfz install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20241215-431524-snncfz/bootsnap
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.4/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20241117-38862-cdorg1 sitelibdir\=./.gem.20241117-38862-cdorg1 clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-snncfz sitelibdir\=./.gem.20241215-431524-snncfz clean

@@ -3,17 +3,17 @@ current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle
 creating Makefile
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20241209-148814-ykzxv4 sitelibdir\=./.gem.20241209-148814-ykzxv4 clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-ql2h2t sitelibdir\=./.gem.20241215-431524-ql2h2t clean
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20241209-148814-ykzxv4 sitelibdir\=./.gem.20241209-148814-ykzxv4
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-ql2h2t sitelibdir\=./.gem.20241215-431524-ql2h2t
 compiling debug.c
 compiling iseq_collector.c
 linking shared-object debug/debug.so
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20241209-148814-ykzxv4 sitelibdir\=./.gem.20241209-148814-ykzxv4 install
-/usr/bin/install -c -m 0755 debug.so ./.gem.20241209-148814-ykzxv4/debug
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-ql2h2t sitelibdir\=./.gem.20241215-431524-ql2h2t install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20241215-431524-ql2h2t/debug
 
 current directory: /home/eder/Documents/Projects/BlogWithoutGoogle/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
-make DESTDIR\= sitearchdir\=./.gem.20241209-148814-ykzxv4 sitelibdir\=./.gem.20241209-148814-ykzxv4 clean
+make DESTDIR\= sitearchdir\=./.gem.20241215-431524-ql2h2t sitelibdir\=./.gem.20241215-431524-ql2h2t clean
