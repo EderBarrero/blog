@@ -1,0 +1,22 @@
+<div class="my-8">
+  <!-- Cuadro con borde y sombra -->
+  <div class="bg-white p-8 rounded-lg border border-gray-300 ">
+        <%= form_with(url: generate_pdf_path(format: :pdf), method: :get) do |form| %>
+        <div class="flex flex-row justify-end items-center" id="date-range-picker" date-rangepicker>
+            <div class="relative max-w-sm">
+                <%= form.text_field :start_date, value: params[:start_date], id: "datepicker-actions", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder: "Date start", data: { datepicker: true, datepicker_buttons: true, datepicker_autoselect_today: true } %>
+            </div>
+
+            <span class="mx-4 text-gray-500">to</span>
+
+            <!-- Campo de fecha de fin -->
+            <div class="relative max-w-sm">
+                <%= form.text_field :end_date, value: params[:end_date], id: "datepicker-actions", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", placeholder: "Date end", data: { datepicker: true, datepicker_buttons: true, datepicker_autoselect_today: true } %>
+            </div>
+            <div class="flex flex-col justify-end px-6">
+                <%= form.submit 'Generate PDF', class: 'btn btn-primary text-gray-500 font-bold text-xs' %>
+            </div>    
+        </div>
+        <% end %>
+  </div>
+</div>

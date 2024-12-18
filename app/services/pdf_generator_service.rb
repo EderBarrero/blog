@@ -8,7 +8,9 @@ class PdfGeneratorService
   MONTSERRAT_BOLD_FONT_PATH = Rails.root.join('app', 'assets', 'fonts', 'Montserrat-Bold.ttf')
   LOGO_IMG_PATH = Rails.root.join('app', 'assets', 'images', 'aba_tech_logo.png')
 
-  def initialize(user_data, email_initializer)
+  def initialize(user_data, email_initializer, start_date, end_date)
+    @start_date = start_date
+    @end_date = end_date
     @email_initializer = email_initializer
     @user_data = user_data
     @pdf = Prawn::Document.new
@@ -93,7 +95,7 @@ class PdfGeneratorService
 
   def mid_section
     mid_section_data = [['General', '', ''], ['Start time:', 'End Time:', 'Executed by:'],
-              ["Apr 7, 2020", '15m 9s', "#{@email_initializer}"]]
+              ["#{@start_date}", "#{@end_date}", "#{@email_initializer}"]]
    
     mid_section_options = {
      width: @document_width,

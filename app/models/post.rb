@@ -11,7 +11,6 @@ class Post < ApplicationRecord
   scope :scheduled_user, ->(user) { where("published_at > ? and user_id = ?", Time.current, user.id) }
   scope :all_user, ->(user) { where("user_id = ?", user.id) }
 
-
   def draft?
     published_at.nil?
   end

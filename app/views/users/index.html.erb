@@ -1,20 +1,8 @@
 <div class="text-center pt-8">
-  <p class="text-4xl p-8 font-semibold text-gray-800">Users Management</p>
+  <p class="text-4xl p-8  text-gray-800">Users Management</p>
 </div>
 
-
-<div id="date-range-picker" date-rangepicker class="flex flex-row justify-end items-center pb-16">
-  <div class="relative">
-    <input id="datepicker-range-start" name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start">
-  </div>
-  <span class="mx-4 text-gray-500">to</span>
-  <div class="relative">
-    <input id="datepicker-range-end" name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end">
-</div>
-<div class="flex flex-row justify-center"> 
-    <%= link_to 'Generar PDF', generate_pdf_path(format: :pdf), class: 'btn btn-primary text-gray-900 text-sm' %> 
-</div>
-</div>
+<%= render partial: 'users/form_pdf' %>
 
 <div class="mb-16 mx-auto">
   <!-- Cuadro con borde y sombra -->
@@ -52,9 +40,7 @@
       </table>
     </div>
     </div>
+  <%= render partial: 'shared/pagination' %>
+
   </div>
 </div>
-
-
-
-<%= render partial: 'shared/pagination' %>
