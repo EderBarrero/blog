@@ -89,3 +89,5 @@ group :test do
   gem 'minitest', '5.25.4'
 
 end
+
+gem "dotenv-rails", "~> 3.1"
