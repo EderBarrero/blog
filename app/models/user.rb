@@ -5,9 +5,8 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
 
   scope :is_admin, -> {where("role = ?", 2)}
-  # Ex:- scope :active, -> {where(:active => true)}
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  scope :filter_date, ->(start_date, end_date) { where("created_at >= ? and created_at <= ?", start_date, end_date )}
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
  
